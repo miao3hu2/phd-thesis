@@ -16,6 +16,35 @@
 \tableofcontents
 \section{Introduction}
 \subsection{Tensor networks}
+
+Tensors are multi-dimensional arrays of numbers that generalize the concept of scalars, vectors, and matrices. More than mere arrays, they are the natural mathematical objects for describing multilinear relationships, and their components transform in a prescribed way under a change of basis. Examples range from the stress tensor in continuum mechanics, differential forms in differential geometry, to density operators in quantum many-body systems. 
+
+(TODO: Some notations and definitions of tensors, tensor products, contractions, orders, penrose diagrams etc.)
+
+(TODO: Curse of dimensionality: The number of entries in a tensor grows exponentially with the order, making it challenging to store and manipulate tensors of high orders.)
+
+To circumvent the curse of dimensionality, tensor networks represent or approximate a high-order tensor by contracting a collection of low-order tensors. The contraction pattern is encoded by a graph, the \emph{network}, whose vertices carry the tensors and whose edges denote the indices that are summed over; the remaining open edges correspond to the indices of the original tensor.
+
+One famous example of a tensor network is the matrix product state (MPS), also known as the tensor train in numerical analysis [cite].
+
+(TODO: introduce MPS, including the graphical representation, the algebraic variety it lives in. Compare the dimensions of this variety with the dimension of the ambient space of tensors. Compare the number of parameters in a tensor network representation with the number of entries in the original tensor.)
+
+(TODO: introduce a nice characterization theorem of MPS, Oseledets (2011, Theorem 2.1))
+
+Every tensor has an exact MPS representation. (TODO: how to construct it by successive SVDs, and emphasize that the bond dimension can be as large as the rank of the flattened tensor)
+
+Reducing the bond dimension is a common technique to make tensor network representations more efficient. (TODO: now discuss the importance of the bond dimension. Relate it to Schmidt rank, entanglement entropy, and the expressiveness of the tensor network.)
+
+Take quantum information perspective, the characterization theorem of MPS is known as the entanglement area law (TODO: entanglement area law and many-body physics, and how MPS can efficiently represent ground states of gapped 1D systems.)
+
+In fact, the entanglement area law holds for any networks from a simple argument on linear algebra. (TODO: discuss the entanglement area law for general tensor networks, such as PEPS)
+
+(TODO: adding loops in the network can increase the expressiveness of tensor networks at fixed bond dimension. Though there exists tensor that cannot be represented precisely. Approximation is possible, depending on the structure of the network and the bond dimension. Discuss the expressiveness of tensor networks with loops, and how to quantify it.)
+
+Onto the reason why some tensor networks are more expressive than others, with focus on the rank and try to leads to the quantum max-flow min-cut problem, containement of tensor network varieties, and the expressiveness of holographic tensor networks. 
+
+
+
 \subsection{Random matrices and tensors}
 \subsection{Holography}
 \subsection{Results overview}
